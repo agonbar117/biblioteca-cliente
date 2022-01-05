@@ -14,32 +14,28 @@ function gestionFormularios(oEvento){
   
     inicializarSelectsFormularios();
   
-    if( oE.target.id == 'mnuAltaPrestamo'){
-      frmAltaPrestamo.style.display = "block";    
-    }
-  
-    else if( oE.target.id == 'mnuDevolverPrestamo'){
-      frmDevolverPrestamo.style.display = "block";
-    } 
-  
-    else if( oE.target.id == 'mnuAltaUsuario'){
-      frmAltaUsuario.style.display = "block";
-    } 
-  
-    else if( oE.target.id == 'mnuAltaArticulo'){
-      frmAltaArticulo.style.display = "block";
-    }
-    else if(oE.target.id == 'mnuListadoPrestamo')
-    {
-      frmListadoPrestamoFecha.style.display="block";
-    }
-    else if(oE.target.id == 'mnuListadoPrestamoUsuario')
-      {
+    switch(oE.target.id){
+      case 'mnuAltaPrestamo':
+        frmAltaPrestamo.style.display = "block";
+        break; 
+      case 'mnuDevolverPrestamo':
+        frmDevolverPrestamo.style.display = "block";
+        break;
+      case 'mnuAltaUsuario':
+        frmAltaUsuario.style.display = "block";
+        break;
+      case 'mnuAltaArticulo':
+        frmAltaArticulo.style.display = "block";
+        break;
+      case 'mnuListadoPrestamo':
+        frmListadoPrestamoFecha.style.display="block";
+        break;
+      case 'mnuListadoPrestamoUsuario':
         frmListadoPrestamoUsuario.style.display="block";
-      }
-  else if(oE.target.id == 'mnuListadoTipoArticulos')
-    {
-      frmListadoArticuloTipo.style.display="block";
+        break;
+      case 'mnuListadoTipoArticulos':
+        frmListadoArticuloTipo.style.display="block";
+        break;
     }
 }
 
